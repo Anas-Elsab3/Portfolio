@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: white;
+            background: linear-gradient(to bottom, #1a1a2e, #16213e);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 64px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content {
+                flex-direction: row;
+            }
+        }
+
+        .profile-image {
+            width: 192px;
+            height: 192px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero-text {
+                text-align: left;
+            }
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .social-links {
+                justify-content: flex-start;
+            }
+        }
+
+        .social-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #60a5fa;
+        }
+
+        /* About Section */
+        .about {
+            padding: 64px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .about-content {
+            max-width: 768px;
+            margin: 0 auto;
+            color: #cbd5e1;
+            text-align: center;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 64px 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 32px;
+            max-width: 1024px;
+            margin: 48px auto 0;
+        }
+
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .project-card {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .project-icon {
+            width: 24px;
+            height: 24px;
+            color: #60a5fa;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: #cbd5e1;
+            margin-bottom: 16px;
+        }
+
+        .project-link {
+            color: #60a5fa;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #93c5fd;
+        }
+
+        .project-link::after {
+            content: "→";
+            margin-left: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 32px 0;
+            text-align: center;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <img src="https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-6/329165832_3003630076608977_7442712847626536857_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGFUTYbCJfBLX5gx1bu70gkAcEtt9BiLCgBwS230GIsKA-YDQlduTstHbYxgkBYOR_I8FrKAzSoFhOfftBTMg2S&_nc_ohc=bOm74UuvnY8Q7kNvgGBEO8u&_nc_oc=AdgTmyTFsmSjxA1jqd_HQCiXHA3V-djqu9ARQsbJMnpcPBK_bqhmwNH37GFf2p7HmQY&_nc_zt=23&_nc_ht=scontent.fcai19-7.fna&_nc_gid=ApAWn-oDsyjy_yW-_lrIO3U&oh=00_AYBtPpi63xPuVGpG4duVphpg9QyE-82npgwlXUOn84UMOg&oe=67B17476" 
+                         alt="Profile" 
+                         class="profile-image">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Anas Elsaba</h1>
+                    <p class="hero-subtitle">Passionate student</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Anas-Elsab3" class="social-link">GitHub</a>
+                        <a href="https://www.facebook.com/anas.elsaba.5/" class="social-link">Facebook</a>
+                        <a href="https://www.linkedin.com/in/anas-elsaba-506540288/" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    Hi! I'm an engineering student who is passoinate about cyber security and web development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- WW3 Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">World War 3 Project</div>
+                    </div>
+                    <p class="project-description">
+                        A HTML-based website about WW3. 
+                        This project shows my fundamental HTML skills and content organization ability.
+                    </p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+
+                <!-- BBC Clone -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">BBC Website Clone</div>
+                    </div>
+                    <p class="project-description">
+                        A clone trial of the BBC website homepage, 
+                        built it to practice CSS and share with my friends. 
+                        This project demonstrates the ability to recreate complex designs
+                    </p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Anas Elsaba. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
