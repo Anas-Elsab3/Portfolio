@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BBC news</title>
+        <style>
+            #topbar{
+    width: 100%;
+    margin:0 atuo;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nxtbar{
+    background-color: #BB1919;
+    width: 100%;
+    margin:0 atuo;
+    height: 80px;
+    align-items: center;
+    color: white;
+    font-size: 65px;
+    font-weight: lighter;
+    display: flex;
+}
+#lstbar{
+    background-color: #A91717;
+    width: 100%;
+    margin:0 atuo;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+.item:hover{
+    text-decoration: underline;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#logo{
+    width:120px;
+}
+#log{
+    width:30px;
+    margin: 10px;
+}
+.tpsc{
+    float:left;
+    border-left: 1px #CCCCCC solid;
+    height: 100%;
+    margin:0px 10px;
+}
+.lstsc{
+    float:left;
+    border-left: 1px #BA4444 solid;
+    height: 40%;
+    margin:30% 10px;
+}
+.image-button {
+    border: none; /* Remove any default border */
+    padding: 0; /* Remove any default padding */
+    background-color: transparent; /* Ensure background is transparent */
+    display: inline-block; /* Make sure the image behaves like an inline element */
+}
+#news{
+    margin-left: 15%;
+}
+#loc{
+    position: absolute;
+    right: 0;
+}
+#loc:hover{
+    text-decoration: underline;
+}
+#main{
+    display: flex;
+    margin-left: 15%;
+    
+}
+#left{
+float:left;
+font-weight: normal;
+}
+#right{
+    margin-left: 10px;
+float:right;
+
+
+}
+#asda{
+    margin:20px;
+    height: 200px;
+    float:right
+    
+}
+.vertical-line {
+    width: 1px;
+    height: 300px; /* Set the height of the border */
+    background-color: #CCCCCC;
+    margin-top: 55px; /* Adjust the top margin to shift the border down */
+}
+#asd{
+    color: black;
+    font-weight: bold;
+}
+
+#asd:hover{
+    color: #1167A8;
+    cursor: pointer;
+}
+
+#sml{
+    border-left: 1px solid gray;
+    height: 5px;
+}
+a{
+    text-decoration:none;
+    color: #A91717;
+}
+a:hover{
+    color: #1167A8;
+}
+.thumbs{
+max-width: 250px;
+margin: 25px 5px 5px 25px;
+font-weight: lighter;
+color: #CCCCCC;
+}
+.thumb{
+    margin-right: 10px;
+    height: 40px;
+    float: left;
+}
+        </style>
+
+    </head>
+    <body>
+        
+        <div id="topbar">
+            <img id ="logo"  src="https://imgs.search.brave.com/8lTMD-0ZDSSy83MaRTO495k9wnyp6buaeNcqZcyIxeI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE5/LzA3L2JiYy1sb2dv/LTAucG5n">
+            <div class="tpsc"></div>
+            <img id="log" src="https://imgs.search.brave.com/LhSad7Y61FwMIxWRg5hhQ1_muhibPkkjZd4c8jHYHY0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA2LzE5LzI2LzQ2/LzM2MF9GXzYxOTI2/NDY4MF94MlBCZEdM/RjU0c0ZlN2tUQnRB/dlpuUHlYZ3ZhUncw/WS5qcGc">
+            Sign in
+            <div class="tpsc"></div>
+            <img id="log" src="https://imgs.search.brave.com/NC0pYdC1ikd3lRXZ_b8S1YpO6WoANOIb1bhTqsGHVm0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzI4LzAyLzI3/LzM2MF9GXzUyODAy/MjcyNV9BdUZzNW4x/WHdHTTV3VlIzSmFW/TDZIbDVXUmNXYzZW/ci5qcGc">
+            <div class="tpsc"></div>
+            News
+            <div class="tpsc"></div>
+            Sport
+            <div class="tpsc"></div>
+            Weather
+            <div class="tpsc"></div>
+            iPlayer
+            <div class="tpsc"></div>
+            TV
+            <div class="tpsc"></div>
+            More
+            <img id="log" src="https://imgs.search.brave.com/BIKp9nF7lSvxWN9fYF_OBftVM6Jx7zzqzEgpXlv4MJg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0LzAzLzE4LzE1/LzM2MF9GXzQwMzE4/MTU0OF85NE5QMGI3/b29vd0pSekIyc3Jw/SWV3cFlJMHJZVENz/Uy5qcGc">
+            <div class="tpsc"></div>
+            <form>
+                <input type="text" style="width: 150px; height: 30px;border: 2px solid;border-radius: 9px ;"placeholder="Search..."; >
+            </form>
+            <input type="image" id="log"  clsas="image-button" src="https://imgs.search.brave.com/JKVySSP_Ckwrd0Nd5XjFNwSoMYvwiuOBQYNbmZtF4TU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA2LzY1Lzk0LzY4/LzM2MF9GXzY2NTk0/NjgwMF9TWkc2UkZp/bWo2eHlpMEFCeWk2/TUp1Mmx1aTI3TnVU/Uy5qcGc">
+           
+        </div>
+        <div id="nxtbar">
+            <p id="news">NEWS</p>
+            <div id="loc">
+                Find local news
+                <img id="log" style="transform: translatey(15px);"src="https://imgs.search.brave.com/WHJ1O8J7UoI4WSez_8rRG7SOVMEXljMeSqtDsU6mjOU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC9sb2NhdGlv/bi1pY29uLTcyM3gx/MDI0LTQybnFpY3g1/LnBuZw">
+            </div>
+        </div>
+        <div id="lstbar">
+            <div class="item">Home</div>
+            <div class="lstsc"></div>
+            <div class="item">UK</div>
+            <div class="lstsc"></div>
+            <div class="item">World</div>
+            <div class="lstsc"></div>
+            <div class="item">Business</div>
+            <div class="lstsc"></div>
+            <div class="item">Politics</div>
+            <div class="lstsc"></div>
+            <div class="item">Tech</div>
+            <div class="lstsc"></div>
+            <div class="item">Science</div>
+            <div class="lstsc"></div>
+            <div class="item">Health</div>
+            <div class="lstsc"></div>
+            <div class="item">Education</div>
+            <div class="lstsc"></div>
+            <div class="item">Entertainment & Arts</div>
+            <div class="lstsc"></div>
+            <div class="item">Video & Audio</div>
+            <div class="lstsc"></div>
+            <div class="item">More</div>
+            
+            <img id="log" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-V8B4a8M62uH2ozadBqjEm8uTma2jtBU9cZLIvWTEYjhgewJcZpdu1VOjE3Y&s">
+
+        </div>
+        <div id="main">
+            <div id="left">
+                <div>
+                <u>Technology</u><br><br>
+                <p id="asd" style="font-weight: bold; font-size: larger;">Asda bug exposed payment details</p>
+                <p style="max-width: 250px;float:left">Security vulnerabilities that put customers at risk have affected Asda's website for a couple of years, a security expert has revealed.<br><br><span><img style="width: 20px; transform: translateY(5px);" src="https://imgs.search.brave.com/dAQesjlZ54Lywqg3K1G9FGAB7fnNBE80xdfbysK0GEI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzY4Lzg5Lzg5/LzM2MF9GXzI2ODg5/ODkyOF9wUFZNSXpB/TDR4dXVlV3JsRDZF/SmpSVzd5dFlvbE5L/US5qcGc"></span>19 January 2016  | <a href="">Technology</a></p>
+                <img id="asda"src="https://eco-cdn.co.uk/webdeveloper2.0/content/2-css/images/main-article-image.png">
+                </div>
+                <hr align="left" width="50px" color="#A91717">
+                <p id="asd">Surveillance firm hit in hack attack</p>
+                <p id="asd">eBay flaw has existed for months</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div id="right">
+
+                <p style="margin:60px 0px 20px 5px;">Watch/Listen</p>
+                <div class="thumbs">
+                    <img class="thumb" src="https://eco-cdn.co.uk/webdeveloper2.0/content/2-css/images/article1.png">
+                    <p id="asd">UK science chief backs blockchains</p>
+                    <img style="width: 20px; transform: translateY(5px);" src="https://imgs.search.brave.com/dAQesjlZ54Lywqg3K1G9FGAB7fnNBE80xdfbysK0GEI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzY4Lzg5Lzg5/LzM2MF9GXzI2ODg5/ODkyOF9wUFZNSXpB/TDR4dXVlV3JsRDZF/SmpSVzd5dFlvbE5L/US5qcGc"></span>19 January 2016
+                </div>
+                <div class="thumbs">
+                    <img class="thumb" src="https://eco-cdn.co.uk/webdeveloper2.0/content/2-css/images/article2.png">
+                    <p id="asd">Drone register gives 'accountability'</p>
+                    <img style="width: 20px; transform: translateY(5px);" src="https://imgs.search.brave.com/dAQesjlZ54Lywqg3K1G9FGAB7fnNBE80xdfbysK0GEI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzY4Lzg5Lzg5/LzM2MF9GXzI2ODg5/ODkyOF9wUFZNSXpB/TDR4dXVlV3JsRDZF/SmpSVzd5dFlvbE5L/US5qcGc"></span>19 January 2016 | <a href="">Technology</a>
+                </div>
+                <div class="thumbs">
+                    <img class="thumb" src="https://eco-cdn.co.uk/webdeveloper2.0/content/2-css/images/article3.png">
+                    <p id="asd">SpaceX rocket explodes during landing</p>
+                    <img style="width: 20px; transform: translateY(5px);" src="https://imgs.search.brave.com/dAQesjlZ54Lywqg3K1G9FGAB7fnNBE80xdfbysK0GEI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzY4Lzg5Lzg5/LzM2MF9GXzI2ODg5/ODkyOF9wUFZNSXpB/TDR4dXVlV3JsRDZF/SmpSVzd5dFlvbE5L/US5qcGc"></span>19 January 2016 | <a href="">Science & Environment</a>
+                </div>
+                
+
+
+            </div>
+            
+
+
+        </div>
+        
+    </body>
+</html>
