@@ -31,8 +31,8 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             padding: 12px 24px;
             border: none;
             border-radius:50%;
@@ -151,13 +151,13 @@
         .projects-grid {
             display: grid;
             gap: 32px;
-            max-width: 1024px;
+            /*max-width: 1024px;*/
             margin: 48px auto 0;
         }
 
         @media (min-width: 768px) {
             .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -265,13 +265,13 @@
                 <!-- WW3 Project -->
                 <div class="project-card">
                     <div class="project-header">
-                        <div class="project-title">World War 3 Project</div>
+                        <div class="project-title">World War III Project</div>
                     </div>
                     <p class="project-description">
                         A HTML-based website about WW3. 
                         This project shows my fundamental HTML skills and content organization ability.
                     </p>
-                    <a href="ww3.html" class="project-link">View Project</a>
+                    <a href="WW3.html" class="project-link">View Project</a>
                 </div>
 
                 <!-- BBC Clone -->
@@ -284,7 +284,20 @@
                         built it to practice CSS and share with my friends. 
                         This project demonstrates the ability to recreate complex designs
                     </p>
-                    <a href="project.html" class="project-link">View Project</a>
+                    <a href="BBC.html" class="project-link">View Project</a>
+                </div>
+
+                <!-- Reaction tester -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">Reaction tester Project</div>
+                    </div>
+                    <p class="project-description">
+                        A simple game built using front-end languages:
+                        HTML, CSS and JavaScript.
+                        It presents the effective integration of these technologies.
+                    </p>
+                    <a href="Reaction tester.html" class="project-link">View Project</a>
                 </div>
             </div>
         </div>
@@ -300,10 +313,10 @@
     <script>
         const colors = [
             { name: 'Mirage', value: 'linear-gradient(to bottom, #1a1a2e, #16213e)' },
-            { name: 'Midnight Blue', value: 'linear-gradient(to bottom, #2c3e50, #3498db)' },
-            { name: 'Forest Green', value: 'linear-gradient(to bottom, #2ecc71, #27ae60)' },
-            { name: 'Royal Purple', value: 'linear-gradient(to bottom, #8e44ad, #9b59b6)' },
-            { name: 'Sunset Orange', value: 'linear-gradient(to bottom, #e74c3c, #c0392b)' }
+            { name: 'Blue', value: 'linear-gradient(to bottom, #2c3e50, #3498db)' },
+            { name: 'Green', value: 'linear-gradient(to bottom, #2ecc71, #27ae60)' },
+            { name: 'Purple', value: 'linear-gradient(to bottom, #8e44ad, #9b59b6)' },
+            { name: 'Orange', value: 'linear-gradient(to bottom, #e74c3c, #c0392b)' }
         ];
         
         let currentColorIndex = 0;
