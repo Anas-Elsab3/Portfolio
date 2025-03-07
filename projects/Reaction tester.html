@@ -154,7 +154,75 @@
     display: none;
     font-size: large;
   }
+  #index {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    display: none;
+    font-size: large;
+  }
 
+  .game-end-box {
+    display: none; /* Initially hidden, use JavaScript to display */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.game-end-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.game-end-box p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#playagain{
+      display: none;
+      padding: 16px 32px;
+      font-size: 20px;
+      font-weight: 600;
+      border: none;
+      border-radius: 9999px;
+      background: white;
+      color: #a855f7;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      transform: translateY(150px);
+
+}
+
+#playagain.visible {
+    display: block;
+    opacity: 1;
+  }
   
     </style>
     
@@ -169,6 +237,12 @@
     <div id="shape"></div>
 
     <div id="timer"></div>
+    <br>
+    <div id="index"></div>
+    <div id = "game-end-box" class="game-end-box">
+        <h2>Congratulations!</h2>
+        <p id="end-box"></p>
+    </div>
     <script>
       const textContainer = document.getElementById('text-container');
       const text1 = "A shape will appear in a random location on the page.";
@@ -260,7 +334,7 @@
               button.classList.add('visible');
           }, 10);
         }
-        setTimeout(showbutton,9800);
+        setTimeout(showbutton, 9800);//9800
 
         function updateNumber(newNumber) {
             numberElement.classList.remove('visible');
@@ -279,6 +353,7 @@
         }
 
         function startCountdown() {
+            document.getElementById("game-end-box").style.display='none';
           let count = 3;
           buttonElement.style.display = 'none';
           numberElement.textContent = count;
@@ -302,8 +377,7 @@
             
         }
 
-        var start;
-        var end;
+        var start, end, i = 1, sum = 0, best;
 
         function random(){
             var clr = 0xFFFFFF;
@@ -322,17 +396,35 @@
             shape.style.height = randomH +'px';
             shape.style.borderRadius = randomR+'%';
             document.getElementById("shape").style.display='block';
-            document.getElementById("timer").style.display='block';
             start = Date.now();
         }
         document.getElementById("shape").onclick= function(){
             document.getElementById("shape").style.display='none';
+            document.getElementById("timer").style.display='block';
+            document.getElementById("index").style.display='block';
             end = Date.now()
             time = (end-start)/1000;
-            document.getElementById("timer").innerHTML = "Your time is " + time + "s";
+            sum += time;
+            if (!(time>best))
+                best=time;
+            document.getElementById("timer").innerHTML = "Your time is " + time.toFixed(2) + "s";
+            document.getElementById("index").innerHTML = i+"/5";
+            if(i==5){
+                document.getElementById("game-end-box").style.display='block';
+                showbutton();
+                document.getElementById("button").innerHTML = "Play again";
+                document.getElementById("button").style.transform = "translateY(150px)";
+                document.getElementById("end-box").innerHTML = "Your Average is "+(sum/5).toFixed(2)+"<br> and your best is "+best.toFixed(2);
+                document.getElementById("index").innerHTML = i+"/5";
+                document.getElementById("timer").style.display='none';
+                document.getElementById("index").style.display='none';
+                i = 1, sum = 0, best=1000;
+                return;
+            }
             setTimeout(function(){
-            random();
+                random();
             },2000);
+            i++;
         };
 
     </script>
